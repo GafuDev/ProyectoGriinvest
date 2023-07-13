@@ -1,0 +1,74 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <form action="/griinvest/actualizarProy/{{actualizarProy.id_proyecto}}" method="POST">
+                        <div class="form-group">
+                            <input value="{{actualizarProy.titulo}}" type="text" name="titulo" class="form-control" placeholder="Título Proyecto" required>
+                        </div>
+                        <div class="form-group">
+                            <input value="{{actualizarProy.imagen}}" type="file" name="imagen" class="form-control" placeholder="sube una imagen" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea value="{{actualizarProy.descripcion}}" rows="5" name="descripcion" class="form-control" placeholder="Ingresa una Descripción de tu proyecto" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input value="{{actualizarProy.costo_proyecto}}" type="money" name="costo_proyecto" class="form-control" placeholder="Costo Proyecto" required>
+                        </div>
+                        <div class="form-group">
+                            <select value="{{actualizarProy.region}}" name="region" class="form-control" required>
+                                <option disabled selected>Selecciona una Región</option> 
+                                <option value="1">Arica y Parinacota</option>
+                                <option value="2">Tarapacá</option>
+                                <option value="3">Antofagasta</option>
+                                <option value="4">Atacama</option>
+                                <option value="5">Coquimbo</option>
+                                <option value="6">Valparaíso</option>
+                                <option value="7">Metropolitana de Santiago</option>
+                                <option value="8">O'Higgins</option>
+                                <option value="9">Maule</option>
+                                <option value="10">Bio-Bio</option>
+                                <option value="11">Araucanía</option>
+                                <option value="12">De Los Ríos</option>
+                                <option value="13">De Los Lagos</option>
+                                <option value="14">Ñuble</option>
+                                <option value="15">Aysén</option>
+                                <option value="16">Magallanes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select value="{{actualizarProy.rubro}}" name="rubro" class="form-control" required>
+                                <option disabled selected>Selecciona un Rubro</option> 
+                                <option value="1">Energías Renobables</option>
+                                <option value="2">Agricultura Sostenible</option>
+                                <option value="3">Ganadería Sostenible</option>
+                                <option value="4">Construcción Sustentable</option>
+                                <option value="5">Moda Sostenible</option>
+                                <option value="6">Tecnología Verde</option>
+                                <option value="7">Transporte Sostenible</option>
+                                <option value="8">Reciclaje</option>
+                                <option value="9">Gestión de Residuos</option>
+                                <option value="10">Concincia social y ambiental</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="10" value="{{actualizarProy.apreciacion_general}}"  type="text" name="apreciacion_general" class="form-control" placeholder="Describa su proyecto" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" value="{{actualizarProy.destacado}}" type="text" name="destacado" class="form-control" placeholder="Aspectos destacados" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" value="{{actualizarProy.beneficio}}"  type="text" name="beneficio" class="form-control" placeholder="Ventajas y beneficios" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Actualizar Proyecto
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

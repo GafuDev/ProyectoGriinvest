@@ -1,0 +1,37 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <form action="/griinvest/actualizar/{{actualizarUsuario.id}}" method="POST">
+                        <div class="form-group m-2">
+                            <input type="text" value="{{actualizarUsuario.nombre}}" name="nombre" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group m-2">
+                            <input type="text" value="{{actualizarUsuario.apellido}}" name="apellido" class="form-control" placeholder="Apellido" required>
+                        </div>
+                        <div class="form-group m-2">
+                            <input type="email" value="{{actualizarUsuario.correo}}" name="correo" class="form-control" placeholder="Correo" required>
+                        </div>
+                        <div class="form-group m-2">
+                            <input type="text" value="{{actualizarUsuario.contrasena}}" name="contrasena" class="form-control" placeholder="Contrasena" required>
+                        </div>
+                        <div class="form-group m-2">
+                            <select name="rol" value="{{actualizarUsuario.rol}}" class="form-control" required>
+                                <option disabled selected>Selecciona un ROL</option> 
+                                <option value="1">Emprendedor</option>
+                                <option value="2">Inversionista</option>
+                            </select>
+                        </div>
+                        <div class="form-group m-2">
+                            <button class="btn btn-success btn-block">
+                                actualizar Usuario
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
