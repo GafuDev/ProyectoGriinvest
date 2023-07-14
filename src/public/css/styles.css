@@ -9,6 +9,10 @@ body {
 
   overflow: hidden;
 }
+.icon{
+  width: 50px;
+  height: auto;
+}
 
 .container {
   margin: 0 auto;
