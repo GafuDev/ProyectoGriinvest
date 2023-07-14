@@ -45,7 +45,7 @@ router.post('/registrarse', passport.authenticate('local.signup', {
     router.get("/salir", isLoggedIn, (req, res, next) => {
       req.logOut(req.user, err => {
           if(err) return next(err);
-          res.redirect("/index");  
+          res.redirect("/");  
       });
   });
 

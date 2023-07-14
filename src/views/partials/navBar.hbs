@@ -26,8 +26,10 @@
           Opciones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {{#if user.admin}}
             <a class="dropdown-item" href="/griinvest/listar">Listar Usuarios</a>
             <a class="dropdown-item" href="/griinvest/agregar">Agregar Usuario</a>
+            {{/if}}
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/griinvest/agregarProy">Agregar Proyecto</a>
             <a class="dropdown-item" href="/griinvest/ListarProy">Listar Proyectos</a>
