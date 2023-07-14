@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
+    <img class="icon" src="./img/icon.png" alt="">
     <a class="navbar-brand" style="color:#0dff00" href="/index">GRIINVEST</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,8 +27,10 @@
           Opciones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            {{#if user.admin}}
             <a class="dropdown-item" href="/griinvest/listar">Listar Usuarios</a>
             <a class="dropdown-item" href="/griinvest/agregar">Agregar Usuario</a>
+            {{/if}}
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="/griinvest/agregarProy">Agregar Proyecto</a>
             <a class="dropdown-item" href="/griinvest/ListarProy">Listar Proyectos</a>
