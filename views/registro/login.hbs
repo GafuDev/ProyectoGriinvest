@@ -1,0 +1,33 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <img src="/img/logo.png" alt="Logo Griinvest" class="card-img-top mx-auto m-2 w-60">
+                    <h3 class="p-3">Inicia Sesión</h3>
+                </div>
+                    <div class="card-body">   
+                        <form action="/login" method="POST">
+                            <div class="form-group m-2">
+                                <input type="email" name="correo" class="form-control" placeholder="Ingresar Correo" required>
+                            </div>
+                            <div class="form-group m-2">
+                                <input type="password" name="contrasena" class="form-control" placeholder="Ingresar Contraseña"
+                                    required>
+                            </div>
+                            <div class="form-group m-2">
+                                <button class="btn btn-success btn-block">
+                                    Ingresar
+                                </button>
+                            </div>
+                        </form>
+                        <div class="form-group">
+                            <div class="mx-auto p-2">
+                                <p>Si aún no tienes cuenta <a href="/registrarse">REGÍSTRATE</a></a></p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <form action="/views/agregarProy" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="titulo" class="form-control" placeholder="Título Proyecto"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <select name="region" class="form-control" required>
+                                <option disabled selected>Selecciona una Región</option>
+                                <option value="Arica y Parinacota">Arica y Parinacota</option>
+                                <option value="Tarapacá">Tarapacá</option>
+                                <option value="Antofagasta">Antofagasta</option>
+                                <option value="Atacama">Atacama</option>
+                                <option value="Coquimbo">Coquimbo</option>
+                                <option value="Valparaíso">Valparaíso</option>
+                                <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                                <option value="O'Higgins">O'Higgins</option>
+                                <option value="Maule">Maule</option>
+                                <option value="Bio-Bio">Bio-Bio</option>
+                                <option value="Araucanía">Araucanía</option>
+                                <option value="De Los Ríos">De Los Ríos</option>
+                                <option value="De Los Lagos">De Los Lagos</option>
+                                <option value="Ñuble">Ñuble</option>
+                                <option value="Aysén">Aysén</option>
+                                <option value="Magallanes">Magallanes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="rubro" class="form-control" required>
+                                <option disabled selected>Selecciona un Rubro</option>
+                                <option value="Energías Renobables">Energías Renobables</option>
+                                <option value="Agricultura Sostenible">Agricultura Sostenible</option>
+                                <option value="Ganadería Sostenible">Ganadería Sostenible</option>
+                                <option value="Construcción Sustentable">Construcción Sustentable</option>
+                                <option value="Moda Sostenible">Moda Sostenible</option>
+                                <option value="Tecnología Verde">Tecnología Verde</option>
+                                <option value="Transporte Sostenible">Transporte Sostenible</option>
+                                <option value="Reciclaje">Reciclaje</option>
+                                <option value="Gestión de Residuos">Gestión de Residuos</option>
+                                <option value="Concincia social y ambiental">Concincia social y ambiental</option>
+                                <option value="Ecoturismo">Ecoturismo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="10" type="text" name="apreciacion_general" class="form-control"
+                                placeholder="Describa su proyecto" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" type="text" name="destacado" class="form-control"
+                                placeholder="Detalle la contribucion ecologica de su proyeco" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="costo_proyecto" class="form-control" placeholder="Costo Proyecto"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Crear Proyecto
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

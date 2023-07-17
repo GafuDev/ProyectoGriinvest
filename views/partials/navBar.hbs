@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="icon" src="http://localhost:4000/img/icon.png" alt="" />
+    <a class="navbar-brand" style="color:#0dff00" href="/">GRIINVEST</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <ul></ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/views/listarTodoProy">Ver Proyectos</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Opciones
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {{#if user.admin}}
+                <a class="dropdown-item" href="/views/listar">Listar
+                  Usuarios</a>
+                <a class="dropdown-item" href="/views/agregar">Agregar
+                  Usuario</a>
+                <a class="dropdown-item" href="/views/listarProyAdm">Aprobar Proyectos</a>
+              {{/if}}
+              {{#if (isEmpty user.rol)}}
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/views/agregarProy">*Agregar
+                  Proyecto</a>
+                <a class="dropdown-item" href="/views/ListarProy">*Listar
+                  Proyectos</a>
+                  <a class="dropdown-item" href="/views/listarTodoProy" class="btn btn-secondary">Listar todos los proyectos</a>
+                <div class="dropdown-divider"></div>
+              {{else}}
+                <a class="dropdown-item" href="/views/invertir">*Invertir</a>
+                <a class="dropdown-item" href="/views/listinvest">*Listar Inversiones</a>
+                <a class="dropdown-item" href="/views/listarContactados">*Proyectos
+                  Contactados</a>
+                  <a class="dropdown-item" href="/views/listarTodoProy" class="btn btn-secondary">Listar todos los proyectos</a>
+              {{/if}}
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/perfil">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/salir">Salir</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Ingresar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/registrarse">Registrarse</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

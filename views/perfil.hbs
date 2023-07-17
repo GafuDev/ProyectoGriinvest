@@ -1,0 +1,31 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="p-2">Bienvenido</h3>
+          <h3 class="p-3">{{user.nombre}} {{user.apellido}}</h3>
+          <h4 class="p-2">{{user.correo}}</h4>
+          <div class="p-4">
+        {{#if user.admin}}
+          <a class="btn btn-success" href="/views/ListarProyAdm">Aprobar Proyectos</a><br><br>
+          </div>
+          <div>
+            <a href="/views/listarTodoProy" class="btn btn-secondary">Listar todos los proyectos</a>
+          </div>
+          {{/if}}
+          {{#if (isEmpty user.rol)}}
+          <a href="/views/listarProy" class="btn btn-primary m-4">
+            Ve tus proyectos creados!
+          </a>
+          <a href="/views/agregarProy" class="btn btn-secondary m-4">
+            Agrega un nuevo proyecto!
+          </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

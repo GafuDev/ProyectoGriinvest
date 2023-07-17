@@ -1,0 +1,28 @@
+<div class="container p-4">
+        <h2 class="tiuser">USUARIOS ADMINISTRADORES</h2>
+        <div class="row">
+        {{#each usuariosAdm}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <p class="m-2">{{nombre}}</p>
+                    <p class="m-2">{{apellido}}</p>
+                    <p class="m-2">{{telefono}}</p>
+                    <p class="text-muted">{{correo}}</p>
+                    <p class="text-muted">{{rol}}</p>
+                    <a class="btn btn-danger" href="/views/eliminar/{{id}}">Eliminar</a>
+                    <a class="btn btn-warning" href="/views/actualizar/{{id}}">Editar</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay usuarios creados</p>
+                <a href="/views/agregar">Agrega uno!</a>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    </div>
+</div>

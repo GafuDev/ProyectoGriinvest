@@ -1,0 +1,40 @@
+<div class="container p-4">
+  <div class="row">
+    {{#if verProy}}
+    <div class="wrap">
+      <img src="" alt="" />
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title text-uppercase">
+            {{verProy.titulo}}
+          </h3>
+          <p class="card-text"><b>Rubro:</b> {{verProy.rubro}}</p>
+          <p class="card-text"><b>Región:</b> {{verProy.region}}</p>
+          <div class="p-3">
+            <b>DESCRIPCION GENERAL</b>
+            <p class="card-text">{{verProy.apreciacion_general}}</p>
+          </div>
+          <div>
+            <b>ASPECTOS DESTACADOS</b>
+            <p class="card-text">{{verProy.destacado}}</p>
+          </div>
+          <br><br>
+          <h4 class="card-title" style="color: rgb(128, 30, 3);">Costo Total: {{verProy.costo_proyecto}}</h4>
+          <div>
+            <h4 class="card-title" style="color: green;">Recaudado: {{inversion}}</h4>
+          </div>
+        </div>
+        <a class="btn btn-primary"
+          href="mailto:{{verProy.usuario.correo}}?subject=Contacto%20Proyecto&body=
+          Hola%20{{verProy.usuario.nombre}}%20{{verProy.usuario.apellido}},
+          %0D%0A%0D%0AEstoy%20interesado%20en%20el%20proyecto%20{{verProy.titulo}}
+          .%20Por%20favor%20cont%C3%A1ctame%20para%20m%C3%A1s%20informaci%C3%B3n.">Contactar</a><br>
+
+        <a class=" btn btn-success" href="/views/invertir">Invertir</a><br>
+        <a class="btn btn-danger" href="/views/listarTodoProy">Volver</a>
+      </div>
+
+    </div>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container p-4">
+    <h1 class="p-4"><b>Inversiones realizadas</b></h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Proyecto</th>
+                <th>Región</th>
+                <th>Rubro</th>
+                <th>Costo</th>
+                <th>Invertido</th>
+                <th>fecha inversion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each proyecto}}
+            <tr>
+                <td>{{titulo}}</td>
+                <td>{{region}}</td>
+                <td>{{rubro}}</td>
+                <td>{{costo_proyecto}}</td>
+                {{#each listInver}}
+                <td>{{inversion}}</td>
+                <td>{{fecha}}</td>
+                <td>
+                    <a class="btn btn-primary" href="/views/invertir/{{id_proyecto}}">
+                        Ver Proyecto</a><br><br>
+                    <a class="btn btn-success" href="/views/verProyecto/{{id_proyecto}}">
+                        Eliminar</a>
+                </td>
+            {{/each}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
