@@ -1,2 +1,12 @@
+#GIT
 node_modules
+
+#ENVIORMENT
 .env
+
+
+
+
+# CUSTOM
+package-lock.json
+log
